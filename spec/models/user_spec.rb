@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     u = User.new
 
     expect(u.valid?).to eq(false)
-    expect(u.errors.count).to eq(3)
+    expect(u.errors.count).to eq(5)
     expect(u.errors.messages[:email]).not_to eq(nil)
     expect(u.errors.messages[:password]).not_to eq(nil)
   end

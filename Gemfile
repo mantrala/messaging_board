@@ -19,6 +19,7 @@ gem 'devise', '~> 4.2'
 
 group :test do
   gem 'rails-controller-testing', '~> 0.0.3'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development, :test do

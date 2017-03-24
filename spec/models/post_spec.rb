@@ -11,7 +11,7 @@ RSpec.describe Post, type: :model do
     p = Post.new
 
     expect(p.valid?).to eq(false)
-    expect(p.errors.count).to eq(2)
+    expect(p.errors.count).to eq(3)
     expect(p.errors.messages[:body]).not_to eq(nil)
     expect(p.errors.messages[:title]).not_to eq(nil)
   end

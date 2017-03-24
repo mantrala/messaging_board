@@ -15,4 +15,9 @@ RSpec.describe User, type: :model do
     expect(u.errors.messages[:email]).not_to eq(nil)
     expect(u.errors.messages[:password]).not_to eq(nil)
   end
+
+  it "returns a user full name" do
+    u = build(:user)
+    expect(u.full_name).to eq("Richard Schneems")
+  end
 end

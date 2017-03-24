@@ -1,2 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+a, a:hover {
+  color: #fff;
+}
+
+.nav > li > a:hover {
+  background-color: #334045;
+}

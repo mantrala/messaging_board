@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   validates :body,  presence: true
 
   belongs_to :user
+  has_many   :comments, dependent: :destroy
 
   scope :all_posts, -> { includes(:user).all.order('created_at desc') }
 end

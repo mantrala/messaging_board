@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show]
-
   def index
     @posts = Post.all_posts
   end
 
   def show
+    @post = Post.find_post(params[:id])
+    @comment = Comment.new
   end
 
   def new
@@ -26,10 +26,6 @@ class PostsController < ApplicationController
   end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
-    end
-
     def post_params
       params.require(:post).permit(:title, :body)
     end

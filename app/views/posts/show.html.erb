@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  <div class="row post">
+    <strong><%= @post.title %></strong>
+  </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
+  <div class="row body">
+    <%= @post.body %>
+  </div>
+</div>
 <%= link_to 'Back', posts_path %>

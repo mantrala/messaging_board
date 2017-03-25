@@ -23,7 +23,7 @@ describe "creating a post", :type => :feature do
 
   it "can post a comment to a post" do
     fill_in 'comment_body', with: 'this is a comment'
-    click_button 'Comment'
+    page.find('._comment').click
 
     expect(page).to have_content 'this is a comment'
   end
